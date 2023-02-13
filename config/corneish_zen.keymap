@@ -86,11 +86,11 @@
           combos {
               compatible = "zmk,combos";
               combos_bsps {
-                  timeout-ms = <50>;
-                  key-positions = <0 1>;
-                  bindings = <$kb BSPS>
+                timeout-ms = <50>;
+                key-positions = <19 20>;
+                bindings = <&kp BSPC>;
                   layers = <0>;
-                }
+                };
             };
         keymap {
                 compatible = "zmk,keymap";
