@@ -83,6 +83,15 @@
                 bindings = <&kp>, <&kp>;
               };
           };
+          combos {
+              compatible = "zmk,combos";
+              combos_bsps {
+                  timeout-ms = <50>;
+                  key-positions = <0 1>;
+                  bindings = <$kb BSPS>
+                  layers = <0>;
+                }
+            };
         keymap {
                 compatible = "zmk,keymap";
 
