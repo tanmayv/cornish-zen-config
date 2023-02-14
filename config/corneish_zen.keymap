@@ -75,14 +75,25 @@
 
 / {
         behaviors {
-            hm: homerow_mods {
+            hm_left: homerow_mods_left {
                 compatible = "zmk,behavior-hold-tap";
-                label = "HOMEROW_MODS";
+                label = "HOMEROW_MODS_LEFT";
                 #binding-cells = <2>;
                 tapping-term-ms = <150>;
                 quick-tap-ms = <0>;
-                flavor = "tap-preferred";
+                flavor = "tap-unless-interrupted";
                 bindings = <&kp>, <&kp>;
+                hold-trigger-key-positions = <6 7 8 9 10 18 19 20 21 22 30 31 32 33 34>;
+              };
+            hm_right: homerow_mods_right {
+                compatible = "zmk,behavior-hold-tap";
+                label = "HOMEROW_MODS_RIGHT";
+                #binding-cells = <2>;
+                tapping-term-ms = <150>;
+                quick-tap-ms = <0>;
+                flavor = "tap-unless-interrupted";
+                bindings = <&kp>, <&kp>;
+                hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29>;
               };
             bspc_del: backspace_delete {
                   compatible = "zmk,behavior-mod-morph";
@@ -161,7 +172,7 @@
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
    &none   &kp MY_Q &kp MY_W &kp MY_E &kp MY_R &kp MY_T   &kp MY_Y &kp MY_U  &kp MY_I     &kp MY_O   &kp MY_P    &none
-   &none &hm LSHIFT MY_A &hm LCTRL MY_S &hm LALT MY_D &hm LGUI MY_F &kp MY_G   &kp MY_H &hm RGUI MY_J  &hm RALT MY_K     &hm RCTRL MY_L   &hm RSHIFT MY_SEMI &none
+   &none &hm_left LSHIFT MY_A &hm_left LCTRL MY_S &hm_left LALT MY_D &hm_left LGUI MY_F &kp MY_G   &kp MY_H &hm_right RGUI MY_J  &hm_right RALT MY_K     &hm_right RCTRL MY_L   &hm_right RSHIFT MY_SEMI &none
    &none &kp MY_Z &kp MY_X &kp MY_C &kp MY_V &kp MY_B   &kp MY_N &kp MY_M  &kp MY_COMMA &kp MY_DOT &kp MY_FSLH &none
                   &kp LGUI &mo 1 &lt SYMBOL SPACE   &lt NUMBER RET &mo NAVIGATION &kp RALT
                         >;
