@@ -85,6 +85,21 @@
                 key-positions = <2 3>;
                 bindings = <&kp TAB>;
               };
+              combos_rpar {
+                timeout-ms = <50>;
+                key-positions = <7 8>;
+                bindings = <&kp RPAR>;
+              };
+              combos_rbkt {
+                timeout-ms = <50>;
+                key-positions = <19 20>;
+                bindings = <&kp RBKT>;
+              };
+              combos_rbrc {
+                timeout-ms = <50>;
+                key-positions = <31 32>;
+                bindings = <&kp RBRC>; 
+              };
             };
             macros {
               entry_macro: entry_macro {
@@ -92,7 +107,7 @@
                   label = "ZM_my_macro";
                   #binding-cells = <0>;
                   wait-ms = <30>;
-                  tap-ms = <40>;
+                  tap-ms = <30>;
                   bindings =  <&macro_press &kp LSHIFT>,
                               <&macro_tap &kp SLASH>,
                               <&macro_release &kp LSHIFT>,
