@@ -12,24 +12,56 @@
 #define SYMBOL 2
 #define NAVIGATION 3
 
-#define DV_UNDER DQT
-#define DV_MINUS SQT 
-#define DV_PLUS RBRC
-#define DV_EQUAL RBKT
-#define DV_LBKT MINUS
+#define DV_UNDER UNDER
+#define DV_MINUS MINUS 
+#define DV_PLUS PLUS
+#define DV_EQUAL EQUAL
+#define DV_LBKT LBKT
 #define DV_LBRC UNDER
-#define DV_RBKT EQUAL
-#define DV_RBRC PLUS
-#define DV_DQT LS(Q)
-#define DV_SQT Q
-#define DV_COLON LS(Z)
-#define DV_SEMI Z
-#define DV_COMMA W
-#define DV_DOT E
-#define DV_LT LS(W)
-#define DV_GT LS(E)
-#define DV_QMARK LBRC
-#define DV_SLASH LBKT
+#define DV_RBKT RBKT
+#define DV_RBRC RBRC
+#define DV_DQT DQT
+#define DV_SQT SQT
+#define DV_COLON COLON
+#define DV_SEMI SEMI
+#define DV_COMMA COMMA
+#define DV_DOT DOT
+#define DV_LT LT
+#define DV_GT GT
+#define DV_QMARK QMARK
+#define DV_SLASH SLASH
+
+#define MY_Q DQT 
+#define MY_W DOT
+#define MY_E LT
+#define MY_R GT 
+#define MY_T Y
+#define MY_Y F
+#define MY_U G
+#define MY_I C
+#define MY_O R
+#define MY_P L
+#define MY_A A
+#define MY_S S
+#define MY_D E
+#define MY_F U
+#define MY_G D
+#define MY_H D
+#define MY_J H
+#define MY_K T
+#define MY_L N
+#define MY_SEMI S
+#define MY_Z COLON 
+#define MY_X Q
+#define MY_C J
+#define MY_V K
+#define MY_B X
+#define MY_N B
+#define MY_M M
+#define MY_COMMA W
+#define MY_DOT V
+#define MY_FSLH Z
+
 / {
   chosen {
     zmk,matrix_transform = &default_transform;
@@ -65,12 +97,12 @@
               compatible = "zmk,combos";
               combos_bsps {
                 timeout-ms = <50>;
-                key-positions = <19 20>;
+                key-positions = <19 20 21>;
                 bindings = <&kp BSPC>;
-                  layers = <0>;
+                layers = <0>;
                 };
 
-              combos_caps_word {
+              combos_caps {
                 timeout-ms = <50>;
                 key-positions = <15 16 19 20>;
                 bindings = <&caps_word>;
@@ -84,21 +116,25 @@
                 timeout-ms = <50>;
                 key-positions = <2 3>;
                 bindings = <&kp TAB>;
+                layers = <SYMBOL>;
               };
               combos_rpar {
                 timeout-ms = <50>;
                 key-positions = <7 8>;
                 bindings = <&kp RPAR>;
+                layers = <SYMBOL>;
               };
               combos_rbkt {
                 timeout-ms = <50>;
                 key-positions = <19 20>;
-                bindings = <&kp RBKT>;
+                bindings = <&kp DV_RBKT>;
+                layers = <SYMBOL>;
               };
               combos_rbrc {
                 timeout-ms = <50>;
                 key-positions = <31 32>;
-                bindings = <&kp RBRC>; 
+                bindings = <&kp DV_RBRC>; 
+                layers = <SYMBOL>;
               };
             };
             macros {
@@ -125,9 +161,9 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &none   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &none
-   &none &hm LSHIFT A &hm LCTRL S &hm LALT D &hm LGUI F &kp G   &kp H &hm RGUI J  &hm RALT K     &hm RCTRL L   &hm RSHIFT SEMI &none
-   &none &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &none
+   &none   &kp MY_Q &kp MY_W &kp MY_E &kp MY_R &kp MY_T   &kp MY_Y &kp MY_U  &kp MY_I     &kp MY_O   &kp MY_P    &none
+   &none &hm LSHIFT MY_A &hm LCTRL MY_S &hm LALT MY_D &hm LGUI MY_F &kp MY_G   &kp MY_H &hm RGUI MY_J  &hm RALT MY_K     &hm RCTRL MY_L   &hm RSHIFT MY_SEMI &none
+   &none &kp MY_Z &kp MY_X &kp MY_C &kp MY_V &kp MY_B   &kp MY_N &kp MY_M  &kp MY_COMMA &kp MY_DOT &kp MY_FSLH &none
                   &kp LGUI &mo 1 &lt SYMBOL SPACE   &lt NUMBER RET &mo NAVIGATION &kp RALT
                         >;
                 };
