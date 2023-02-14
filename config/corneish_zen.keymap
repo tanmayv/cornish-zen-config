@@ -31,10 +31,10 @@
 #define DV_QMARK QMARK
 #define DV_SLASH SLASH
 
-#define MY_Q DQT 
-#define MY_W DOT
-#define MY_E LT
-#define MY_R GT 
+#define MY_Q SQT 
+#define MY_W COMMA
+#define MY_E DOT
+#define MY_R P 
 #define MY_T Y
 #define MY_Y F
 #define MY_U G
