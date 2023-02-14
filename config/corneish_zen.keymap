@@ -104,7 +104,7 @@
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
    &none   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &none
-   &none &hm LSHIFT A &hm LCTRL S &hm LALT D &hm LGUI F &kp G   &kp H &hm RGUI J  &none
+   &none &hm LSHIFT A &hm LCTRL S &hm LALT D &hm LGUI F &kp G   &kp H &hm RGUI J  &hm RALT K     &hm RCTRL L   &hm RSHIFT SEMI &none
    &none &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &none
                   &kp LGUI &mo 1 &lt SYMBOL SPACE   &lt NUMBER RET &mo 2 &kp RALT
                         >;
@@ -144,3 +144,4 @@
 /* &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans   */
 /* &trans &trans &trans &trans &trans      &trans &trans &trans &trans &trans   */
 /* &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT */
+avcid
