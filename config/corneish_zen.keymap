@@ -42,7 +42,7 @@
 #define MY_O R
 #define MY_P L
 #define MY_A A
-#define MY_S S
+#define MY_S O
 #define MY_D E
 #define MY_F U
 #define MY_G I
@@ -51,7 +51,7 @@
 #define MY_K T
 #define MY_L N
 #define MY_SEMI S
-#define MY_Z COLON 
+#define MY_Z SEMI 
 #define MY_X Q
 #define MY_C J
 #define MY_V K
@@ -116,7 +116,6 @@
                 timeout-ms = <50>;
                 key-positions = <2 3>;
                 bindings = <&kp TAB>;
-                layers = <SYMBOL>;
               };
               combos_rpar {
                 timeout-ms = <50>;
