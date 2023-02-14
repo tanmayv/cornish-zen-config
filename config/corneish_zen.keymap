@@ -119,8 +119,8 @@
                 bindings = <&caps_word>;
               };
               combos_esc {
-                timeout-ms = <50>;
-                key-positions = <14 15 16>;
+                timeout-ms = <40>;
+                key-positions = <15 16>;
                 bindings = <&kp ESC>;
               };
               combos_tab {
@@ -172,8 +172,8 @@
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
    &none   &kp MY_Q &kp MY_W &kp MY_E &kp MY_R &kp MY_T   &kp MY_Y &kp MY_U  &kp MY_I     &kp MY_O   &kp MY_P    &none
-   &none &kp MY_A &kp MY_S &kp MY_D &kp MY_F &kp MY_G   &kp MY_H &kp MY_J  &kp MY_K     &kp MY_L   &kp MY_SEMI &none
-   &none &hm_left LSHIFT MY_Z &hm_left LCTRL MY_X &kp MY_C &kp MY_V &kp MY_B   &kp MY_N &kp MY_M  &kp MY_COMMA &hm_right RSHIFT MY_DOT &hm_right RSHIFT MY_FSLH &none
+   &none &hm_left LSHIFT MY_A &hm_left LCTRL MY_S &kp MY_D &kp MY_F &kp MY_G   &kp MY_H &kp MY_J  &kp MY_K     &hm_right RCTRL MY_L   &hm_right RSHIFT MY_SEMI &none
+   &none &kp MY_Z &kp MY_X &kp MY_C &kp MY_V &kp MY_B   &kp MY_N &kp MY_M  &kp MY_COMMA &kp MY_DOT &kp MY_FSLH &none
                   &kp LGUI &mo 1 &lt SYMBOL SPACE   &lt NUMBER RET &mo NAVIGATION &kp RALT
                         >;
                 };
