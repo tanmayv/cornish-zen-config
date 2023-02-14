@@ -81,7 +81,7 @@
                 #binding-cells = <2>;
                 tapping-term-ms = <150>;
                 quick-tap-ms = <0>;
-                flavor = "tap-unless-interrupted";
+                flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
                 hold-trigger-key-positions = <6 7 8 9 10 18 19 20 21 22 30 31 32 33 34>;
               };
@@ -91,7 +91,7 @@
                 #binding-cells = <2>;
                 tapping-term-ms = <150>;
                 quick-tap-ms = <0>;
-                flavor = "tap-unless-interrupted";
+                flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
                 hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29>;
               };
@@ -107,8 +107,8 @@
           combos {
               compatible = "zmk,combos";
               combos_bsps {
-                timeout-ms = <50>;
-                key-positions = <19 20 21>;
+                timeout-ms = <40>;
+                key-positions = <19 20>;
                 bindings = <&kp BSPC>;
                 layers = <0>;
                 };
@@ -173,7 +173,7 @@
                         bindings = <
    &none   &kp MY_Q &kp MY_W &kp MY_E &kp MY_R &kp MY_T   &kp MY_Y &kp MY_U  &kp MY_I     &kp MY_O   &kp MY_P    &none
    &none &kp MY_A &kp MY_S &kp MY_D &kp MY_F &kp MY_G   &kp MY_H &kp MY_J  &kp MY_K     &kp MY_L   &kp MY_SEMI &none
-   &none &hm_left LSHIFT MY_Z &hm_left LCTRL MY_X &kp MY_C &kp MY_V &kp MY_B   &kp MY_N &kp MY_M  &kp MY_COMMA &hm_right RCTRL MY_DOT &hm_right RSHIFT MY_FSLH &none
+   &none &hm_left LSHIFT MY_Z &hm_left LCTRL MY_X &kp MY_C &kp MY_V &kp MY_B   &kp MY_N &kp MY_M  &kp MY_COMMA &hm_right RSHIFT MY_DOT &hm_right RSHIFT MY_FSLH &none
                   &kp LGUI &mo 1 &lt SYMBOL SPACE   &lt NUMBER RET &mo NAVIGATION &kp RALT
                         >;
                 };
