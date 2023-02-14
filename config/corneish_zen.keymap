@@ -145,9 +145,9 @@
                   wait-ms = <30>;
                   tap-ms = <30>;
                   bindings =  <&macro_press &kp LSHIFT>,
-                              <&macro_tap &kp SLASH>,
+                              <&macro_tap &kp Z>,
                               <&macro_release &kp LSHIFT>,
-                              <&macro_tap &kp B &kp K &kp R &kp K &kp O &kp AT_SIGN &kp N3 &kp N7 &kp N2 &kp N8 &kp ENTER>;
+                              <&macro_tap &kp X &kp T &kp P &kp T &kp R &kp AT_SIGN &kp N3 &kp N7 &kp N2 &kp N8 &kp ENTER>;
               };
             };
         keymap {
