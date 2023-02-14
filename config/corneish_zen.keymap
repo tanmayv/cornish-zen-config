@@ -30,7 +30,6 @@
 #define DV_GT LS(E)
 #define DV_QMARK LBRC
 #define DV_SLASH LBKT
-
 / {
   chosen {
     zmk,matrix_transform = &default_transform;
@@ -39,7 +38,7 @@
 };
 
 &caps_word {
-    continue-list = <UNDERSCORE MINUS DOT COMMA SLASH>;
+    continue-list = <UNDERSCORE MINUS LT GT QMARK COLON>;
 };
 
 / {
@@ -80,6 +79,11 @@
                 timeout-ms = <50>;
                 key-positions = <15 16>;
                 bindings = <&kp ESC>;
+              };
+              combos_tab {
+                timeout-ms = <50>;
+                key-positions = <2 3>;
+                bindings = <&kp TAB>;
               };
             };
             macros {
@@ -130,14 +134,14 @@
                 raise_layer {
                         label = "SYMBOL";
 // -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  (  |  *  |  /  |      |
-// | CTRL |     |     |     |  ?  |     |   |  -  |  =  |  [  |  /  |  ~  |      |
-// | SHFT |     |     |     |  entry_macro   |     |   |  _  |  +  |  {  | "|" |  `  |      |
+// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  (  |  &  |  *  |  \  |      |
+// | CTRL |     |     |     |  ?  |     |   |  -  |  [  |  =  |  /  |  ~  |      |
+// | SHFT |     |     |     |  entry_macro|||  _  |  {  |  +  | "|" |  `  |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &trans  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp LPAR &kp KP_MULTIPLY &trans &trans
-   &trans &trans   &trans &trans   &kp DV_QMARK   &trans      &kp DV_MINUS &kp DV_EQUAL &kp DV_LBKT  &kp DV_SLASH &kp GRAVE &trans
-   &trans &trans   &trans &trans   &entry_macro   &trans      &kp DV_UNDER &kp DV_PLUS  &kp DV_LBRC  &kp PIPE &kp TILDE &trans
+   &trans  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT        &kp CARET &kp LPAR  &kp AMPS &kp KP_MULTIPLY &kp BSLH &trans
+   &trans &trans   &trans &trans   &kp DV_QMARK   &trans      &kp DV_MINUS &kp DV_LBKT  &kp DV_EQUAL &kp DV_SLASH &kp GRAVE &trans
+   &trans &trans   &trans &trans   &entry_macro   &trans      &kp DV_UNDER &kp DV_LBRC  &kp DV_PLUS  &kp PIPE &kp TILDE &trans
                     	     &trans &trans   &trans   &trans   &trans    &trans
                         >;
                 };
