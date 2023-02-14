@@ -17,7 +17,7 @@
 #define DV_PLUS PLUS
 #define DV_EQUAL EQUAL
 #define DV_LBKT LBKT
-#define DV_LBRC UNDER
+#define DV_LBRC LBRC
 #define DV_RBKT RBKT
 #define DV_RBRC RBRC
 #define DV_DQT DQT
@@ -45,7 +45,7 @@
 #define MY_S S
 #define MY_D E
 #define MY_F U
-#define MY_G D
+#define MY_G I
 #define MY_H D
 #define MY_J H
 #define MY_K T
@@ -97,7 +97,7 @@
               compatible = "zmk,combos";
               combos_bsps {
                 timeout-ms = <50>;
-                key-positions = <19 20 21>;
+                key-positions = <19 20>;
                 bindings = <&kp BSPC>;
                 layers = <0>;
                 };
