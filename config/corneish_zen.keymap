@@ -11,6 +11,24 @@
 #define NUMBER 1
 #define SYMBOL 2
 
+#define DV_UNDER DQT
+#define DV_MINUS SQT 
+#define DV_PLUS RBRC
+#define DV_EQUAL RBKT
+#define DV_LBKT MINUS
+#define DV_LBRC UNDER
+#define DV_RBKT EQUAL
+#define DV_RBRC PLUS
+#define DV_DQT LS(Q)
+#define DV_SQT Q
+#define DV_COLON LS(Z)
+#define DV_SEMI Z
+#define DV_COMMA W
+#define DV_DOT E
+#define DV_LT LS(W)
+#define DV_GT LS(E)
+#define DV_QMARK LBRC
+#define DV_BSLH LBKT
 
 / {
   chosen {
@@ -95,8 +113,8 @@
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
    &trans  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp LPAR &kp KP_MULTIPLY &trans &trans
-   &trans &trans   &trans &trans   &kp QMARK   &trans      &kp MINUS &kp EQUAL &kp LBKT  &kp BSLH &kp GRAVE &trans
-   &trans &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC  &kp PIPE &kp TILDE &trans
+   &trans &trans   &trans &trans   &kp DV_QMARK   &trans      &kp DV_MINUS &kp DV_EQUAL &kp DV_LBKT  &kp DV_BSLH &kp GRAVE &trans
+   &trans &trans   &trans &trans   &entry_macro   &trans      &kp DV_UNDER &kp DV_PLUS  &kp DV_LBRC  &kp PIPE &kp TILDE &trans
                     	     &trans &trans   &trans   &trans   &trans    &trans
                         >;
                 };
