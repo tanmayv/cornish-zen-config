@@ -92,7 +92,7 @@
                   bindings =  <&macro_press &kp LSHIFT>,
                               <&macro_tap &kp SLASH>,
                               <&macro_release &kp LSHIFT>,
-                              <&macro_tap &kp B &kp K &kp R &kp K &kp O &kp AT_SIGN &kp 3 &kp 7 &kp 2 &kp 8>;
+                              <&macro_tap &kp B &kp K &kp R &kp K &kp O &kp AT_SIGN &kp N3 &kp N7 &kp N2 &kp N8>;
               };
             };
         keymap {
