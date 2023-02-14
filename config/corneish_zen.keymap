@@ -39,7 +39,7 @@
 };
 
 &caps_word {
-    continue-list = <UNDERSCORE MINUS>;
+    continue-list = <UNDERSCORE MINUS DOT COMMA SLASH>;
 };
 
 / {
@@ -52,6 +52,14 @@
                 quick-tap-ms = <0>;
                 flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
+              };
+            bspc_del: backspace_delete {
+                  compatible = "zmk,behavior-mod-morph";
+                  label = "BACKSPACE_DELETE";
+                  #binding-cells = <0>;
+                  bindings = <&kp BACKSPACE>, <&kp DELETE>;
+                  mods = <(MOD_LSFT|MOD_RSFT)>;
+                  keep-mods = <(MOD_RSFT)>;
               };
           };
           combos {
@@ -71,7 +79,7 @@
               combos_esc {
                 timeout-ms = <50>;
                 key-positions = <15 16>;
-                bindings = <&caps_word>;
+                bindings = <&kp ESC>;
               };
             };
             macros {
