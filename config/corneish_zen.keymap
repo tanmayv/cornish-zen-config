@@ -62,6 +62,7 @@
 #define MY_COMMA W
 #define MY_DOT V
 #define MY_FSLH Z
+#define MEH LC(LA(LGUI))
 
 / {
   chosen {
@@ -190,7 +191,7 @@
    &none   &kp MY_Q &kp MY_W &kp MY_E &kp MY_R &kp MY_T   &kp MY_Y &kp MY_U  &kp MY_I     &kp MY_O   &kp MY_P    &none
    &none &hm_shift LSHIFT MY_A &hm_left LCTRL MY_S &hm_left LALT MY_D &hm_left LGUI MY_F &kp MY_G   &kp MY_H &hm_right LGUI MY_J  &hm_right RALT MY_K     &hm_right RCTRL MY_L   &hm_shift RSHIFT MY_SEMI &none
    &none &kp MY_Z &kp MY_X &kp MY_C &kp MY_V &kp MY_B   &kp MY_N &kp MY_M  &kp MY_COMMA &kp MY_DOT &kp MY_FSLH &none
-                  &kp LG(LC(LSHIFT)) &mo 1 &lt SYMBOL SPACE   &lt NUMBER RET &mo NAVIGATION &kp LS(RALT)
+                  &kp LG(LC(LSHIFT)) &kp MEH &lt SYMBOL SPACE   &lt NUMBER RET &mo NAVIGATION &kp LS(RALT)
                         >;
                 };
                 lower_layer {
