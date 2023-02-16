@@ -8,6 +8,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/outputs.h>
 #define NUMBER 1
 #define SYMBOL 2
 #define NAVIGATION 3
@@ -79,7 +80,7 @@
                 compatible = "zmk,behavior-hold-tap";
                 label = "HOMEROW_MODS_LEFT";
                 #binding-cells = <2>;
-                tapping-term-ms = <150>;
+                tapping-term-ms = <200>;
                 quick-tap-ms = <0>;
                 flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
@@ -89,11 +90,20 @@
                 compatible = "zmk,behavior-hold-tap";
                 label = "HOMEROW_MODS_RIGHT";
                 #binding-cells = <2>;
-                tapping-term-ms = <150>;
+                tapping-term-ms = <200>;
                 quick-tap-ms = <0>;
                 flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
                 hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29>;
+              };
+            hm_shift: homerow_mods_shift {
+                compatible = "zmk,behavior-hold-tap";
+                label = "HOMEROW_MODS_SHIFT";
+                #binding-cells = <2>;
+                tapping-term-ms = <150>;
+                quick-tap-ms = <0>;
+                flavor = "tap-preferred";
+                bindings = <&kp>, <&kp>;
               };
             bspc_del: backspace_delete {
                   compatible = "zmk,behavior-mod-morph";
@@ -178,7 +188,7 @@
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
    &none   &kp MY_Q &kp MY_W &kp MY_E &kp MY_R &kp MY_T   &kp MY_Y &kp MY_U  &kp MY_I     &kp MY_O   &kp MY_P    &none
-   &none &hm_left LSHIFT MY_A &hm_left LCTRL MY_S &hm_left LALT MY_D &hm_left LGUI MY_F &kp MY_G   &kp MY_H &hm_right LGUI MY_J  &hm_right RALT MY_K     &hm_right RCTRL MY_L   &hm_right RSHIFT MY_SEMI &none
+   &none &hm_shift LSHIFT MY_A &hm_left LCTRL MY_S &hm_left LALT MY_D &hm_left LGUI MY_F &kp MY_G   &kp MY_H &hm_right LGUI MY_J  &hm_right RALT MY_K     &hm_right RCTRL MY_L   &hm_shift RSHIFT MY_SEMI &none
    &none &kp MY_Z &kp MY_X &kp MY_C &kp MY_V &kp MY_B   &kp MY_N &kp MY_M  &kp MY_COMMA &kp MY_DOT &kp MY_FSLH &none
                   &kp LG(LC(LSHIFT)) &mo 1 &lt SYMBOL SPACE   &lt NUMBER RET &mo NAVIGATION &kp LS(RALT)
                         >;
@@ -213,14 +223,14 @@
                         >;
                 };
                 navigation_layer {
-                        label = "NAV";
+                        label = "ARROWS";
 // -----------------------------------------------------------------------------------------
 // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-&trans &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &trans &kp HOME &kp END &kp N3 &trans &trans
+&out OUT_TOG &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4      &trans &kp HOME &kp END &kp N3 &trans &trans
 &trans &kp LSHIFT &kp LCTRL &kp LALT &kp LGUI &trans      &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
 &trans &trans &trans &trans &trans &trans      &trans &kp PAGE_DOWN &kp PAGE_UP &kp N3 &trans &trans
                     	     &trans &trans   &trans   &trans   &trans    &trans
