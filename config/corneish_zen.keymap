@@ -77,6 +77,13 @@
 
 / {
         behaviors {
+            td_sd: space_dance {
+                compatible = "zmk,behavior-tap-dance";
+                label = "TAP_DANCE_MOD_TAP";
+                #binding-cells = <0>;
+                tapping-term-ms = <200>;
+                bindings = <&kb SPACE>, <&sl SYMBOL>;
+            };
             hm_left: homerow_mods_left {
                 compatible = "zmk,behavior-hold-tap";
                 label = "HOMEROW_MODS_LEFT";
