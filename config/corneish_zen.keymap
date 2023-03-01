@@ -125,7 +125,7 @@
               compatible = "zmk,combos";
               combos_underscore {
                 timeout-ms = <40>;
-                key-positions = <19 31>;
+                key-positions = <7 19>;
                 bindings = <&kp UNDER>;
                 layers = <0>;
                 };
