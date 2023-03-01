@@ -208,7 +208,6 @@
                         label = "QWERTY";
 // -----------------------------------------------------------------------------------------
 // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
@@ -216,7 +215,7 @@
 &kp TILDE           &kp MY_Q &kp MY_W &kp MY_E           &kp MY_R &kp MY_T                &kp MY_Y   &kp MY_U       &kp MY_I     &kp MY_O   &kp MY_P    &kp TAB
 &hm_left LCTRL HOME &kp MY_A &kp MY_S &kp MY_D           &kp MY_F &kp MY_G                &kp MY_H   &kp MY_J       &kp MY_K     &kp MY_L   &kp MY_SEMI &kp ENTER
 &hm_left LGUI END   &kp MY_Z &kp MY_X &kp MY_C           &kp MY_V &kp MY_B                &kp MY_N   &kp MY_M       &kp MY_COMMA &kp MY_DOT &kp MY_FSLH &kp LALT
-                                      &kp LG(LC(LSHIFT)) &kp MEH  &lt SYMBOL SPACE        &kp LSHIFT &mt NAVIGATION &trans
+                                      &kp LG(LC(LSHIFT)) &kp MEH  &lt SYMBOL SPACE        &kp LSHIFT &mo NAVIGATION &trans
                         >;
                 };
                 lower_layer {
