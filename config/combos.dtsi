@@ -19,6 +19,7 @@
     combos {
         compatible = "zmk,combos";
 COMBO(esc,   &kp ESC,     15 16, DEF CLM, 40)
+COMBO(esc,   &to DEF,     15 16, MOU, 40)
 COMBO(alt_bspc,   &kp LA(BSPC), 19 20, DEF, 40)
 COMBO(ctrl_bspc,   &kp LC(BSPC),   19 20, CLM, 40)
 COMBO(lpar,   &kp LPAR,     16 17, DEF CLM, 40)
