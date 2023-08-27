@@ -42,11 +42,11 @@
 #define SR SCROLL_HOR(U_MOUSE_SCROLL_MAX)
 
 &msc {
-  time-to-max-speed-ms = <200>;                 /* <--- How long time until max speed is reached */
+  time-to-max-speed-ms = <300>;                 /* <--- How long time until max speed is reached */
 };
 
 &mmv {
-  time-to-max-speed-ms = <400>;             /* <--- How long time until max speed is reached (default: 500) */
+  time-to-max-speed-ms = <800>;             /* <--- How long time until max speed is reached (default: 500) */
 };
 
 #include "combos.dtsi"
@@ -91,7 +91,16 @@
             quick-tap-ms = <150>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-        };
+	    };
+	ilt: global-quick-tap {
+	   compatible = "zmk,behavior-hold-tap";
+	   label = "INVERSE_LAYER_TOGGLE";
+	   #binding-cells = <2>;
+	   flavor = "hold-preferred";
+	   tapping-term-ms = <200>;
+	   quick-tap-ms = <180>;
+	   bindings = <&mo>, <&to>;
+	 };
 
         // Easy alt-tab with alt+backspace thumb using mod-morphs
         bstab: backspace_tab {
@@ -158,7 +167,7 @@
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &kp LSHIFT    &am LALT SEMI &am LGUI Q    &kp J         &kp K         &kp X             &kp B         &kp M         &kp W         &am RGUI V    &am RALT Z    &kp RSHIFT
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-                                              &lt MOU MEH   &mo SYM       &kp SPACE         &kp ENTER     &mo NAV       &lt FUN HYPER
+                                              &kp MEH       &ilt SYM MOU  &kp SPACE         &kp ENTER     &mo NAV       &kp HYPER
 //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
