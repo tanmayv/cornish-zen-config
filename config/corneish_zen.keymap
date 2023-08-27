@@ -27,14 +27,14 @@
 
 #define MEH LC(LS(LALT))
 #define HYPER LG(LC(LS(LALT)))
-#define U_MOUSE_MOVE_MAX 1500                    /* <--- New max speed setting (default: 600) */
+#define U_MOUSE_MOVE_MAX 1600                    /* <--- New max speed setting (default: 600) */
 
 #define MU 	MOVE_VERT(-U_MOUSE_MOVE_MAX)
 #define MD 	MOVE_VERT(U_MOUSE_MOVE_MAX)
 #define ML 	MOVE_HOR(-U_MOUSE_MOVE_MAX)
 #define MR 	MOVE_HOR(U_MOUSE_MOVE_MAX)
 
-#define U_MOUSE_SCROLL_MAX 100                    /* <--- New max speed setting (default: 10) */
+#define U_MOUSE_SCROLL_MAX 50                    /* <--- New max speed setting (default: 10) */
 
 #define SU SCROLL_VERT(U_MOUSE_SCROLL_MAX)
 #define SD SCROLL_VERT(-U_MOUSE_SCROLL_MAX)
@@ -42,7 +42,7 @@
 #define SR SCROLL_HOR(U_MOUSE_SCROLL_MAX)
 
 &msc {
-  time-to-max-speed-ms = <400>;                 /* <--- How long time until max speed is reached */
+  time-to-max-speed-ms = <200>;                 /* <--- How long time until max speed is reached */
 };
 
 &mmv {
@@ -247,11 +247,11 @@
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
     &none         &none         &none         &kp PG_DN     &kp PG_UP     &none             &none         &none         &none         &none         &mmv MR       &none
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &trans        &trans        &none         &msc SD       &msc SU       &none             &none         &mmv ML       &none         &none         &MOUSE_SELECT &trans
+    &trans        &trans        &none         &msc SD       &msc SU       &none             &none         &mmv ML       &mmv MR       &MOUSE_SELECT &none         &trans
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
     &trans        &trans        &trans        &mmv MD       &mmv MU       &trans            &trans        &to MOU       &trans        &trans        &trans        &trans
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
-					      &none         &none         &mkp LCLK         &mkp RCLK     &none         &none
+					      &none         &none         &mkp RCLK         &mkp LCLK     &none         &none
 //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
