@@ -27,7 +27,7 @@
 
 #define MEH LC(LS(LALT))
 #define HYPER LG(LC(LS(LALT)))
-#define U_MOUSE_MOVE_MAX 600                     /* <--- New max speed setting (default: 600) */
+#define U_MOUSE_MOVE_MAX 1400                    /* <--- New max speed setting (default: 600) */
 
 #undef MOVE_UP
 #undef MOVE_DOWN
@@ -118,7 +118,7 @@
             wait-ms = <10>;
             tap-ms = <10>;
             bindings
-                = <&macro_press &mkp LCLK>
+                = <&macro_tap &mkp LCLK>
                 , <&macro_tap &to DEF>;
         )
         ZMK_MACRO(to_win,
@@ -238,11 +238,11 @@
             label = "MOU";
             bindings = <
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-    &none         &none         &none         &none         &none         &none             &none         &none         &mmv MU       &none         &none         &none
+    &none         &none         &none         &mmv MU       &none         &none             &kp PG_UP     &none         &none         &none         &none         &none
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &trans        &trans        &trans        &MOUSE_SELECT &mkp RCLK     &trans            &trans        &mmv ML       &mmv MD       &mmv MR       &trans        &trans
+    &trans        &trans        &mmv ML       &mmv MD       &mmv MR       &kp PG_UP         &kp PG_DN     &MOUSE_SELECT &mkp RCLK     &none         &trans        &trans
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    &trans        &trans        &trans        &mwh SCROLL_DOWN &mwh SCROLL_UP &trans        &trans        &trans        &trans        &trans        &trans        &trans
+    &trans        &trans        &trans        &msc SCROLL_DOWN &msc SCROLL_UP &trans        &trans        &trans        &trans        &trans        &trans        &trans
 // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
 					      &none         &none         &mkp LCLK         &none         &none         &none
 //                                           ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
