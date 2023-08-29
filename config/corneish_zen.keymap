@@ -27,19 +27,21 @@
 
 #define MEH LC(LS(LALT))
 #define HYPER LG(LC(LS(LALT)))
-#define U_MOUSE_MOVE_MAX 3300                    /* <--- New max speed setting (default: 600) */
+#define U_MOUSE_MOVE_MAX_HORI 3300                    /* <--- New max speed setting (default: 600) */
+#define U_MOUSE_MOVE_MAX_VERT 2400                    /* <--- New max speed setting (default: 600) */
 
-#define MU 	MOVE_VERT(-U_MOUSE_MOVE_MAX)
-#define MD 	MOVE_VERT(U_MOUSE_MOVE_MAX)
-#define ML 	MOVE_HOR(-U_MOUSE_MOVE_MAX)
-#define MR 	MOVE_HOR(U_MOUSE_MOVE_MAX)
+#define MU 	MOVE_VERT(-U_MOUSE_MOVE_MAX_VERT)
+#define MD 	MOVE_VERT(U_MOUSE_MOVE_MAX_VERT)
+#define ML 	MOVE_HOR(-U_MOUSE_MOVE_MAX_HORI)
+#define MR 	MOVE_HOR(U_MOUSE_MOVE_MAX_HORI)
 
-#define U_MOUSE_SCROLL_MAX 30                    /* <--- New max speed setting (default: 10) */
+#define U_MOUSE_SCROLL_MAX_VERT 30                    /* <--- New max speed setting (default: 10) */
+#define U_MOUSE_SCROLL_MAX_HORI 10                    /* <--- New max speed setting (default: 10) */
 
-#define SU SCROLL_VERT(U_MOUSE_SCROLL_MAX)
-#define SD SCROLL_VERT(-U_MOUSE_SCROLL_MAX)
-#define SL SCROLL_HOR(-U_MOUSE_SCROLL_MAX)
-#define SR SCROLL_HOR(U_MOUSE_SCROLL_MAX)
+#define SU SCROLL_VERT(U_MOUSE_SCROLL_MAX_VERT)
+#define SD SCROLL_VERT(-U_MOUSE_SCROLL_MAX_VERT)
+#define SL SCROLL_HOR(-U_MOUSE_SCROLL_MAX_HORI)
+#define SR SCROLL_HOR(U_MOUSE_SCROLL_MAX_HORI)
 
 &msc {
   time-to-max-speed-ms = <400>;                 /* <--- How long time until max speed is reached */
